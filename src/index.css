@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+@theme {
+  --font-libertinus: 'Libertinus Serif', serif;
+  --font-edu: 'Edu NSW ACT Cursive', cursive;
+  /* 🌞 Light Mode */
+  --color-light-bg: #ebebeb;
+  /* neutral gray background */
+  --color-light-side: #f4f4f4;
+  /* lighter gray for cards */
+  --color-light-text: #1f2937;
+  /* dark gray text (not harsh black) */
+  --color-light-primary: #ff1d58;
+  /* same blue accent for consistency */
+
+
+  /* 🌚 Dark Mode */
+  --color-dark-bg: #1f1f1f;
+  /* pure black background */
+  --color-dark-side: #141414;
+  /* slightly softer black for contrast */
+  --color-dark-text: #f9fafb;
+  /* near white text */
+  --color-dark-primary: #2196F3;
+  /* bright blue accent */
+}
+
+/* src/index.css */
+@layer base {
+  body {
+    @apply text-light-text dark:text-dark-text font-sans bg-neutral-200 dark:bg-neutral-800;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .hamburgerbtn {
+    :hover {
+      @apply text-light-primary dark:text-dark-primary transition-all duration-200 ease-in-out;
+    }
+
+    :active {
+      @apply scale-95
+    }
+  }
+
+  .bb {
+    @apply border-b-2 border-b-light-primary dark:border-b-dark-primary placeholder:text-neutral-700 dark:placeholder:text-neutral-300
+  }
+
+  .list {
+    @apply w-full h-12 rounded-lg flex items-center justify-between px-3 cursor-pointer;
+  }
+
+  .list:hover,
+  .activated {
+    @apply border-0 border-l-4 border-light-primary dark:border-dark-primary bg-neutral-300/50 dark:bg-neutral-700/50;
+  }
+
+  .controls {
+    @apply size-10 rounded-full flex items-center justify-center;
+  }
+}
