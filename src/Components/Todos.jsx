@@ -119,7 +119,7 @@ const Task =({task})=>{
         <h4>{showcomplete ? "Collapse Completed" : "Reveal Completed"}</h4>
           <button onClick={() => setshowcomplete(!showcomplete)} className='toggle-btn cursor-pointer '>{showcomplete ? <FaToggleOn className='text-light-primary dark:text-dark-primary size-7' /> : <FaToggleOff className='text-neutral-400 dark:text-neutral-600 size-7' />}</button>
         </div>
-        <div className="todos-list pt-4 space-y-4 w-full max-h-[45%] px-8 overflow-auto   [&::-webkit-scrollbar-thumb]:bg-neutral-500/50  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-700 ">
+        <div className="todos-list pt-4 space-y-4 w-full sm:max-h-[45%] max-h-[30%] sm:px-8 px-6 overflow-auto   [&::-webkit-scrollbar-thumb]:bg-neutral-500/50  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-700 ">
           {list.tasks.map(task => (
             <Task key={task.id} task={task} />
           ))}
