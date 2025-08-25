@@ -106,20 +106,20 @@ const Task =({task})=>{
           <h2 className=' mt-4 text-center  font-semibold sm:text-3xl text-2xl'>{list.title==="Daily" ?`${dailytitle(list.day)}`:list.title}</h2>
           {list.title==="Daily" && <p className='text-center font-medium text-sm font-edu mt-1'>Auto Reset's Daily</p>}
         </div>
-        <div className="p-b-container py-4 px-6 sm:px-8">
+        <div className="p-b-container py-3 sm-py-4 px-8">
           <h3 className='font-semibold text-xl sm:text-2xl '>You're {percent}% done!</h3>
           <div className="progressbar w-full h-4 bg-neutral-300 dark:bg-neutral-700 rounded-full mt-3">
             <div className={`progress h-full bg-light-primary dark:bg-dark-primary rounded-full`} style={{ width: `${percent}%` }}></div>
           </div>
         </div>
-        <div className="newtask  w-full pt-4 px-8">
+        <div className="newtask  w-full py-3 sm-py-4 px-8">
           <input type="text" value={newtask} onChange={(e) => setnewtask(e.target.value)} placeholder='Write a new task...' maxLength={100} className=' p-2 w-[100%] bb' />
         </div>
       { list.tasks.length > 0 && <><div className="toggle-complete  flex items-center justify-between px-8 pt-4">
         <h4>{showcomplete ? "Collapse Completed" : "Reveal Completed"}</h4>
           <button onClick={() => setshowcomplete(!showcomplete)} className='toggle-btn cursor-pointer '>{showcomplete ? <FaToggleOn className='text-light-primary dark:text-dark-primary size-7' /> : <FaToggleOff className='text-neutral-400 dark:text-neutral-600 size-7' />}</button>
         </div>
-        <div className="todos-list pt-4 space-y-4 w-full sm:max-h-[45%] max-h-[30%] sm:px-8 px-6 overflow-auto   [&::-webkit-scrollbar-thumb]:bg-neutral-500/50  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-700 ">
+        <div className="todos-list pt-4 space-y-4 w-full sm:max-h-[45%] max-h-[35%] sm:px-8 px-6 overflow-auto   [&::-webkit-scrollbar-thumb]:bg-neutral-500/50  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-700 ">
           {list.tasks.map(task => (
             <Task key={task.id} task={task} />
           ))}
