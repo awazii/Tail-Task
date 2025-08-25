@@ -30,7 +30,7 @@ const Sidebar = ({ togglesidebar, showsidebar, todolists, settodolists, currlid,
         setnewlist("")
     }
     return (
-        <div className={`Sidebar lg:w-[22vw] md:w-[30vw] sm:w-[40vw] w-[250px] z-10 h-full bg-light-side dark:bg-dark-side p-4  mt-2 fixed top-0 transition-[left] duration-300 ease-in-out ${togglesidebar ? 'left-0' : 'left-[-100vw]'} flex flex-col items-center justify-between gap-4`}>
+        <div className={`Sidebar lg:w-[22vw] md:w-[30vw] sm:w-[40vw] w-[250px] z-10 h-full bg-light-side dark:bg-dark-side p-4   fixed top-0 transition-[left] duration-300 ease-in-out ${togglesidebar ? 'left-0' : 'left-[-100vw]'} flex flex-col items-center justify-between gap-4`}>
             <div onClick={showsidebar} className="hamburgercontainer w-12 h-12 mx-auto flex items-center  justify-center mt-5 group flex-[5%]" >
                 <RxCross2 className='size-7  cursor-pointer  hamburgerbtn group-hover:text-light-primary group-hover:dark:text-dark-primary' />
             </div>
