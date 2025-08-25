@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import Navbar from './Components/Navbar'
-import Sidebar from './Components/sidebar'
+import Sidebar from './Components/Sidebar'
 import Todos from './Components/Todos'
 import { v4 as uuidv4 } from 'https://cdn.jsdelivr.net/npm/uuid@9.0.0/dist/esm-browser/index.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
