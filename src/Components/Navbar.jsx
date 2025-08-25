@@ -3,6 +3,8 @@ import { useState, useRef ,useEffect} from 'react';
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
+import  lightlogo from "../assets/light.png"
+import  darklogo from "../assets/dark.png"
 const Navbar = ({ showsidebar }) => {
     const [darkMode, setDarkMode] = useState(() => {
   return localStorage.getItem("theme") === "dark";
@@ -29,7 +31,7 @@ const Navbar = ({ showsidebar }) => {
             </div>
             <div className="middle flex-grow justify-items-center ">
                 <div className="logo-container w-30  h-30  border-zinc-950 flex items-center justify-center ">
-                    <img className='w-full h-full object-contain' src={darkMode ? "src/assets/Tail Task dark.png" : "src/assets/Tail Task.png"} alt="logo" />
+                    <img className='w-full h-full object-contain' src={darkMode ? darklogo : lightlogo} alt="logo" />
                 </div>
             </div>
             <div className="right sm:basis-[5%] basis-[15%] justify-items-center cursor-pointer  ">
