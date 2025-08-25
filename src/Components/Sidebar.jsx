@@ -14,8 +14,8 @@ const Sidebar = ({ togglesidebar, showsidebar, todolists, settodolists, currlid,
         return (
             <>
                 <div className="task-name flex items-center gap-2 ">
-                    {custom ? <MdDashboardCustomize className='size-6 text-light-primary dark:text-dark-primary' /> : <TbBrandDaysCounter className='size-6 text-light-primary dark:text-dark-primary' />}
-                    <span className='text-light-text dark:text-dark-text text-lg'>{list.title}</span>
+                    {custom ? <MdDashboardCustomize className='size-6  text-light-primary dark:text-dark-primary' /> : <TbBrandDaysCounter className='size-6 text-light-primary dark:text-dark-primary' />}
+                    <span className='text-light-text dark:text-dark-text text-lg lg:max-w-[90%] max-w-[70%] line-clamp-1'>{list.title}</span>
                 </div>
                 <span className='counts'>{count}</span>
             </>
