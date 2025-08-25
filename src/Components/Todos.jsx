@@ -106,7 +106,7 @@ const Task =({task})=>{
           <h2 className=' mt-4 text-center  font-semibold sm:text-3xl text-2xl'>{list.title==="Daily" ?`${dailytitle(list.day)}`:list.title}</h2>
           {list.title==="Daily" && <p className='text-center font-medium text-sm font-edu mt-1'>Auto Reset's Daily</p>}
         </div>
-        <div className="p-b-container py-4 px-8">
+        <div className="p-b-container py-4 px-6 sm:px-8">
           <h3 className='font-semibold text-xl sm:text-2xl '>You're {percent}% done!</h3>
           <div className="progressbar w-full h-4 bg-neutral-300 dark:bg-neutral-700 rounded-full mt-3">
             <div className={`progress h-full bg-light-primary dark:bg-dark-primary rounded-full`} style={{ width: `${percent}%` }}></div>
