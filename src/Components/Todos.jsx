@@ -101,7 +101,7 @@ const Task =({task})=>{
  }
   return (
     <div className='todocontainer mx-auto container h-[80vh] flex '>
-      <div className="todos relative bg-light-bg dark:bg-dark-bg shadow-2xl  w-[90%] lg:w-[50%] md:w-[70%] sm:w-[90%] h-max-[90%]   rounded-4xl mt-10   mx-auto space-y-2">
+      <div className="todos relative bg-light-bg dark:bg-dark-bg shadow-2xl  w-[90%] lg:w-[50%] md:w-[70%] sm:w-[90%] h-max-[90%]   rounded-4xl mt-5 sm:mt-10   mx-auto space-y-2">
         <div className="heading">
           <h2 className=' mt-4 text-center  font-semibold sm:text-3xl text-2xl'>{list.title==="Daily" ?`${dailytitle(list.day)}`:list.title}</h2>
           {list.title==="Daily" && <p className='text-center font-medium text-sm font-edu mt-1'>Auto Reset's Daily</p>}
