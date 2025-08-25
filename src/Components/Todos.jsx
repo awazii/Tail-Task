@@ -89,7 +89,7 @@ const Task =({task})=>{
      <div className={`todo border-b-3 border-light-primary dark:border-dark-primary pb-2 items-center justify-between ${complete && !showcomplete ? "hidden" : "flex"} `} key={task.id}>
             <div className="todo-left flex items-center gap-4  w-[80%] ">
               <div className={`checkbox rounded-full ${complete ?"" : "border"} size-5 cursor-pointer ${complete ? "bg-light-primary dark:bg-dark-primary" : ""}`} onClick={() => completetask(task.id,complete)}></div>
-              {edit ? <input type="text" placeholder={`${task.title}`} value={editvalue} onChange={(e) => seteditvalue(e.target.value)} className='bb  p-1' /> : <p className={`text-md font-semibold max-w-[90%]  line-clamp-2 p-[6px] rounded-xl ${complete ? "line-through" : ""}`}>{task.title}</p>}
+              {edit ? <input type="text" placeholder={`${task.title}`} value={editvalue} onChange={(e) => seteditvalue(e.target.value)} className='bb  p-1' /> : <p className={`text-md font-semibold md:max-w-[90%] max-w-[60%] md:line-clamp-2 line-clamp-1 p-[6px] rounded-xl ${complete ? "line-through" : ""}`}>{task.title}</p>}
             </div>
            { !complete &&<><div className="todo-right flex items-center justify-center gap-3 flex-[20%]">
              {!edit?<><button onClick={() => deltask(task.id)} data-id={task.id} className="delete-btn controls group hover:bg-red-500  size-11 dark:hover:bg-red-700 cursor-pointer"><MdDelete className='text-red-500 size-7 dark:text-red-600 group-hover:text-white' /></button>
